@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natvazqu <natvazqu@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: natvazqu <natvazqu@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 18:43:36 by natvazqu          #+#    #+#             */
-/*   Updated: 2023/12/01 01:19:54 by natvazqu         ###   ########.fr       */
+/*   Updated: 2023/09/24 18:43:38 by natvazqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,24 @@
 
 char	*ft_strtrim(char const *str, char const *set)
 {
-	int		start;
-	int		end;
-	size_t	cntr;
+	int		size;
+	char	*string;
 
 	if (!str || !set)
 		return (0);
-	start = 0;
-	cntr = 0;
-	while (str[start] != '\0' && ft_strchr(set, str[start]) != NULL)
-		start++;
-	end = ft_strlen(str);
-	while (end > start && ft_strchr(set, str[end]) != NULL)
-		end--;
-	return (ft_substr(str, start, end - start + 1));
-}
-// posible fallo en el strlen
-// Comprobar si necesita cambio en el malloc antes del bucle while
-/*
-if (s1[0] == '\0' && set[0] == '\0')
+	if (str[0] == '\0' && set[0] == '\0')
 	{
-		str = malloc(sizeof(char));
-		if (!str)
+		string = malloc(sizeof(char));
+		if (!string)
 			return (0);
-		str[0] = '\0';
-		return (str);
+		string[0] = '\0';
+		return (string);
 	}
-*/
+	while (*str && ft_strchr(set, *str))
+		str++;
+	size = ft_strlen(str);
+	while (size > 0 && ft_strchr(set, str[size]))
+		size--;
+	string = ft_substr(str, 0, (size_t)size + 1);
+	return (string);
+}

@@ -36,9 +36,9 @@ int		ft_atoi(const char *c);
  * this function does nothing.
  * @param s
  * @param n
- * @return int
+ * @return void
  */
-int		ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n);
 /**
  * @brief This function tests for any character for which isupper or
  * islower is true.
@@ -148,9 +148,9 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
  * @brief
  *
  * @param s
- * @return char
+ * @return size_t
  */
-char	ft_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 /**
  * @brief
  *

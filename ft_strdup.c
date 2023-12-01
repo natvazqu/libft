@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natvazqu <natvazqu@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: natvazqu <natvazqu@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 20:45:08 by natvazqu          #+#    #+#             */
-/*   Updated: 2023/12/01 01:19:33 by natvazqu         ###   ########.fr       */
+/*   Updated: 2023/09/25 20:45:13 by natvazqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char	*ft_strdup(const char *str)
 	char	*res;
 
 	len = ft_strlen(str);
-	res = malloc(len + 1);
-	count = 0;
-	if (res == NULL || str == NULL)
+	res = (char *)malloc(len * (sizeof(char)) + 1);
+	if (!res)
 		return (NULL);
+	count = 0;
 	while (count < len)
 	{
 		res[count] = str[count];
@@ -31,5 +31,3 @@ char	*ft_strdup(const char *str)
 	res[count] = '\0';
 	return (res);
 }
-//res = (char *)malloc(size * (sizeof(char)) + 1);
-// más el posible fallo del strlen.

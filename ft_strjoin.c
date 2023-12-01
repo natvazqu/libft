@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcarden <alcarden@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: natvazqu <natvazqu@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 18:42:11 by natvazqu          #+#    #+#             */
-/*   Updated: 2023/12/01 01:08:39 by alcarden         ###   ########.fr       */
+/*   Updated: 2023/12/01 01:19:36 by natvazqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

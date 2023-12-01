@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natvazqu <natvazqu@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: alcarden <alcarden@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 18:42:11 by natvazqu          #+#    #+#             */
-/*   Updated: 2023/09/24 18:42:13 by natvazqu         ###   ########.fr       */
+/*   Updated: 2023/12/01 01:08:39 by alcarden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,21 @@ char	*ft_strjoin(char const *str1, char const *str2)
 	new_str[i] = '\0';
 	return (new_str);
 }
+//	size = ft_strlen(s1) + ft_strlen(s2);
+//	new = (char *)malloc(size * sizeof(char) + 1);
+//	posible condiciones: strlen anterio y malloc anterio
+
+/*compararlo con el siguiente flujo
+
+while (i < size)
+	{
+		if (i < size - ft_strlen(s2))
+			new[i] = s1[i];
+		else
+		{
+			new[i] = s2[x];
+			x++;
+		}
+		i++;
+	}
+*/

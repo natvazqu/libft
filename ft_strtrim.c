@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natvazqu <natvazqu@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: alcarden <alcarden@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 18:43:36 by natvazqu          #+#    #+#             */
-/*   Updated: 2023/09/24 18:43:38 by natvazqu         ###   ########.fr       */
+/*   Updated: 2023/12/01 01:10:51 by alcarden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,15 @@ char	*ft_strtrim(char const *str, char const *set)
 		end--;
 	return (ft_substr(str, start, end - start + 1));
 }
+// posible fallo en el strlen
+// Comprobar si necesita cambio en el malloc antes del bucle while
+/*
+if (s1[0] == '\0' && set[0] == '\0')
+	{
+		str = malloc(sizeof(char));
+		if (!str)
+			return (0);
+		str[0] = '\0';
+		return (str);
+	}
+*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natvazqu <natvazqu@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: alcarden <alcarden@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 18:00:18 by natvazqu          #+#    #+#             */
-/*   Updated: 2023/09/12 18:00:21 by natvazqu         ###   ########.fr       */
+/*   Updated: 2023/12/01 01:06:09 by alcarden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,35 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[idest] = '\0';
 	return (srcsize + destsize);
 }
+/*
+	arrastrar las condiciones del strlen + modificaciones con el mentor en 42
+*/
+
+/*
+size_t	ft_strlcat(char *dest, char *src, unsigned int size)
+{
+	unsigned int	i;
+	unsigned int	x;
+	unsigned int	y;
+	unsigned int	z;
+
+	i = 0;
+	x = 0;
+	while (dest[x] != '\0')
+	{
+		x++;
+	}
+	y = ft_strlen((char *)dest);
+	z = ft_strlen((char *)src);
+	if (size <= y)
+		return (z + size);
+	while (src[i] != '\0' && i < (size - y - 1))
+	{
+		dest[x] = src[i];
+		x++;
+		i++;
+	}
+	dest[x] = '\0';
+	return (y + z);
+}
+*/
